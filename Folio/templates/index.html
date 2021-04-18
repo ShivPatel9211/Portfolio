@@ -1,0 +1,511 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Shiv Kumar Chaudhary Kurmi</a>
+      <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span
+          class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span
+          class="icon-bar"></span></button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navcol-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation"><a href="#about">About Me</a></li>
+        <li role="presentation"><a href="#education">Education </a></li>
+        <li role="presentation"><a href="#skills">Skills </a></li>
+        <li role="presentation"><a href="#projects">Projects </a></li>
+        <li role="presentation"><a href="#contact">Contact Me </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+     <!-- message section
+     <div class="msg">
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Notify</strong> {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+    </div>
+    end message section -->
+
+<div id="slider">
+  <div class="carousel slide carousel_style" data-ride="carousel" id="carousel-1">
+    <div class="carousel-inner" role="listbox">
+      <div class="item">
+        <div class="jumbotron hero-disp carousel-hero">
+          <div class="grey-background">
+            <h1 class="hero-title">Shiv Kumar Chaudhary Kurmi</h1>
+            <p class="text-center hero-subtitle hero-position">I&#39;m a Full Stack Web Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="item active">
+        <div class="jumbotron hero-coffe carousel-hero">
+          <div class="grey-background">
+            <h1 class="hero-title"><em>Responsive Web Development</em></h1>
+            <p class="text-center hero-subtitle">All your websites in all dispositives. Making Responsive your life.</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="jumbotron hero-code1 carousel-hero">
+          <div class="grey-background">
+            <h1 class="hero-title">Personalized Websites</h1>
+            <p class="text-center hero-subtitle">Your website is the face of your business, lets make something
+              beautiful together.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-1" role="button" data-slide="next">
+        <i class="glyphicon glyphicon-chevron-right"></i>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-1" data-slide-to="0"></li>
+      <li data-target="#carousel-1" data-slide-to="1" class="active"></li>
+      <li data-target="#carousel-1" data-slide-to="2"></li>
+    </ol>
+  </div>
+</div>
+<div class="container" id="about">
+  <div class="row" id="image">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 me-with"><img src="{% static 'image/profile.jpeg' %}" class="me img-responsive"></div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row" id="info">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 side-selection">
+      <h2 class="text-center">About Me</h2>
+      <p class="text-center">My name is <em>Shiv Kumar Chaudhary Kurmi</em><br>I'm Full Stack Web Developer <br>
+        I have more of 1 years of experience making websites,<br> updating content, managing some Social networs &
+        others. </p>
+      <p class="text-center">I'm from Susta 5 NawalParasi, Nepal.<br>I love to learn new features in the web development
+        every day,<br> play video games, make some music.</p>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+<div data-bs-parallax-bg="true" id="paralax1"></div>
+<div class="container" id="education">
+  <div class="col-md-1"></div>
+  <div class="col-md-10 side-selection">
+    <!-- education section  -->
+    <h2>Education & Skills</h2>
+    <div class="row" id="formal-education">
+      <div class="col-md-12 side-selection">
+        <h3>Formal Education</h3>
+      </div>
+      <div class="col-md-4"><i class="glyphicon glyphicon-book"></i>
+        <p><strong>Kalinga University</strong> </p>
+        <p>Btech in Computer Science</p>
+        <p>Passout Year-2021</p>
+        <p>Chhattisgarh Naya Raipur,India</p>
+      </div>
+      <div class="col-md-4"><i class="fa fa-briefcase"></i>
+        <p><strong>Kanti Higher Secondary School</strong></p>
+        <p>Higher Secondary School (Science)</p>
+        <p>Passout year-2017</p>
+        <p>Butwal, Nepal</p>
+      </div>
+      <div class="col-md-4"><i class="fa fa-book"></i>
+        <p><strong>Little Buddha Education Foundation Pvt.Ltd</strong> </p>
+        <p> High School </p>
+        <p>Passout Year-2015</p>
+        <p>Jamuniya-4,Gopijung,Nepal</p>
+      </div>
+      <!-- <br>
+			<div class="col-md-12 side-selection">
+				<h3>Skills</h3></div>
+			<div class="col-md-4"><i class="fa fa-language"></i>
+				<p><strong>Programming Language</strong> </p>
+				<ul>
+                    <li>C</li>
+                    <li>CPP</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaScript </li>
+                </ul>
+			</div>
+			<div class="col-md-4"><i class="fa fa-internet-explorer"></i>
+                <p><strong>Web Technology</strong> </p>
+				<ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                    <li>React</li>
+                </ul>
+			</div>
+			<div class="col-md-4"><i class="fa fa-star-half-o"></i>
+				<p><strong>Framework</strong> </p>
+				<ul>
+                    <li>Django</li>
+                    <li>Swing</li>
+                </ul>
+			</div>
+			<div class="col-md-12 side-selection" style='margin-bottom:2px;'>
+			</div>
+			<div class="col-md-4"><i class="fa fa-sitemap"></i>
+				<p><strong>Database Known</strong> </p>
+				<ul>
+                    <li>MySQL</li>
+                    <li>SQLite</li>
+                   
+                </ul>
+			</div>
+			<div class="col-md-4"><i class="fa fa-desktop"></i>
+                <p><strong>Operatring System</strong> </p>
+				<ul>
+                    <li>Window</li>
+                    <li>Linux</li>
+                </ul>
+			</div>
+			<div class="col-md-4"><i class="fa fa-eyedropper"></i>
+				<p><strong>Other Skills</strong> </p>
+				<ul>
+                    <li>Git with GitHub</li>
+                </ul>
+			</div> -->
+    </div>
+    <!-- skill section  -->
+    <div id='skills'>
+      <div class="row hed">
+        <div class="col-md-12 side-selection">
+          <h2 style="margin-bottom: -9px;">Skills</h2>
+        </div>
+      </div>
+
+      <div class="row" style="background-color:rgb(209, 198, 183);">
+        <div class="col-md-4"><i class="fa fa-language"></i>
+          <p><strong>Programming Language</strong> </p>
+
+          <p>C</p>
+          <p>CPP</p>
+          <p>Java</p>
+          <p>Python</p>
+          <p>JavaScript </p>
+
+        </div>
+        <div class="col-md-4"><i class="fa fa-internet-explorer"></i>
+          <p><strong>Web Technology</strong> </p>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>Bootstrap</p>
+          <p>React</p>
+        </div>
+        <div class="col-md-4"><i class="fa fa-star-half-o"></i>
+          <p><strong>Framework</strong> </p>
+          <p>Django</p>
+          <p>Swing</p>
+
+        </div>
+        <div class="col-md-12 side-selection" style='margin-bottom:2px;'>
+        </div>
+        <div class="col-md-4"><i class="fa fa-sitemap"></i>
+          <p><strong>Database Known</strong> </p>
+
+          <p>MySQL</p>
+          <p>SQLite</p>
+
+        </div>
+        <div class="col-md-4"><i class="fa fa-desktop"></i>
+          <p><strong>Operatring System</strong> </p>
+
+          <p>Window</p>
+          <p>Linux</p>
+
+        </div>
+        <div class="col-md-4"><i class="fa fa-eyedropper"></i>
+          <p><strong>Other Skills</strong> </p>
+
+          <p>Git with GitHub</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- project section  -->
+    <div id='projects'>
+      <div class="row hed">
+        <div class="col-md-12 side-selection">
+          <h2 style="margin-bottom: -9px;">Projects</h2>
+        </div>
+      </div>
+
+      <div class="row" style="background-color:rgb(197, 204, 211);">
+        <div class="col-md-4"><i class="fa fa-book"></i>
+          <p><strong>Online Note Sharing</strong></p>
+          <p>“Online Note Sharing” is the project used for sharing notes using the website</p>
+          <h4>Technology Used In This Projects </h4>
+          <p>Python</p>
+          <p>Django</p>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>Bootstrap</p>
+          <p>JavaScript</p>
+          <p>SQLite</p>
+
+        </div>
+        <div class="col-md-4"><i class="fa fa-envelope-open-o"></i>
+          <p><strong>TechBlog</strong> </p>
+          <p>“TechBlog” is the project used for blogging using the website</p>
+          <h4>Technology Used In This Projects</h4>
+          <p>Java</p>
+          <p>JSP</p>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>Bootstrap</p>
+          <p>JavaScript</p>
+          <p>MySQl database</p>
+        </div>
+        <div class="col-md-4"><i class="fa fa-h-square"></i>
+          <p><strong>Hospital Management System</strong> </p>
+          <p>"The hospital management system" is an integrated software that handles different directions of clinic
+            workflows</p>
+          <h4>Technology Used In This Projects</h4>
+          <p>Java</p>
+          <p>Swing</p>
+          <p>MySQl database</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="row" id="certifications">
+    <div class="col-md-12 side-selection">
+      <h2>Certifications</h2>
+    </div>
+    <div class="col-md-4"><i class="glyphicon glyphicon-tags"></i>
+      <p><strong>Python With Django Framework</strong></p>
+      <p>Beginner to Expert Python.Start from the basics and go all the way to creating your own applications and games!
+        Using Python Programming Language</p><a
+        href="https://www.udemy.com/certificate/UC-c9503c8e-127a-4620-99b8-db67c7f77fb1/" target="_blank"
+        alt="Certificate of Completion">Certificate of Completion</a>
+    </div>
+    <div class="col-md-4"><i class="glyphicon glyphicon-tint"></i>
+      <p><strong>Python Programming - From basic to advanced</strong> </p>
+      <p>This course teaches all about the python from basic to advance . In this complete course students will learn
+        Python which is an easy and fun programming language. </p><a
+        href="https://www.udemy.com/certificate/UC-71706c9b-bb9e-4707-b01f-285fa82fc3aa/" target="_blank"
+        alt="Certificate of Completion">Certificate of Completion</a>
+    </div>
+    <div class="col-md-4"><i class="glyphicon glyphicon-leaf"></i>
+      <p><strong>HTML, CSS And JavaScript</strong> </p>
+      <p>A Comprehensive Guide for Beginners interested in learning HTML, CSS, & JavaScript to Build Interactive Web
+        Pages.</p><a href="https://www.udemy.com/certificate/UC-44b687e1-8a07-4556-b134-c63b6cfc14ea/" target="_blank"
+        alt="Certificate of Completion">Certificate of Completion</a>
+    </div>
+  </div>
+  <div class="row" id="certifications1">
+    <div class="col-md-4"><i class="glyphicon glyphicon-bookmark"></i>
+      <p><strong>Complete Java Bootcamp</strong> </p>
+      <p>This course demonstrates all the java concept from baisc to advance . Learn full stack java web development</p>
+      <a href="https://www.udemy.com/certificate/UC-e30aad57-ffec-44a9-b433-007b0111d16f/" target="_blank"
+        alt="Certificate of Completion">Certificate of Completion</a>
+    </div>
+    <div class="col-md-4"><i class="glyphicon glyphicon-align-justify"></i>
+      <p><strong>JavaScript Ultimate Course</strong> </p>
+      <p>This course keeps current best practices and practical uses for JavaScript, while covering syntax, working
+        with the DOM, and developing and debugging across multiple platforms, devices, and browsers. </p><a
+        href="https://www.udemy.com/certificate/UC-8e2f8e7b-21fb-410f-a872-721520fbc168/" target="_blank"
+        alt="Certificate of Completion">Certificate of Completion</a>
+    </div>
+    <div class="col-md-4"><i class="glyphicon glyphicon-knight"></i>
+      <p><strong>Git with GitHub</strong> </p>
+      <p>Learn GIT from beginners to setting up a private repository server and many more. </p><a
+        href="https://www.udemy.com/certificate/UC-a9ffc6e5-bbc3-49fa-9e61-7b7e9887de61/" target="_blank"
+        alt="Certificate of Completion">Certificate of Completion</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-md-1 "></div>
+</div>
+<div data-bs-parallax-bg="true" id="paralax2" class="mt-5"></div>
+<!-- contact section  -->
+<div class="container bg1" id="contact">
+  <legend class="h1 text-center bg1" style="color: rgb(191, 207, 41);">Contact Me</legend>
+  
+  <div class="container wrapper">
+    <form class="form-horizontal" role="form" method="POST" action="">
+      {% csrf_token %}
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name"><span class="required">*</span>Name:</label>
+        <div class="col-sm-10 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="name" type="text" required class="form-control" id="name" placeholder="Your full name"
+              title="name">
+          </div>
+        </div>
+      </div>
+
+      <!--Email Address-->
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="Email"><span class="required">*</span>Email Address:</label>
+        <div class="col-sm-10 inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input name="email" type="email" required class="form-control" id="email" placeholder="your@email.com.au"
+              title="Email">
+          </div>
+        </div>
+      </div>
+
+      <!--Phone Optional-->
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="Phone">Phone #:</label>
+        <div class="col-sm-10 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="phone" type="text" class="form-control" id="phone" placeholder="Optional"
+              title="Phone no."></span>
+          </div>
+        </div>
+      </div>
+      <!--Text Area-->
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="message"><span class="required">*</span>Message:</label>
+        <div class="col-sm-10 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+
+            <textarea class="form-control" name="message" rows="4" placeholder="Type your message here."></textarea>
+          </div>
+        </div>
+      </div>
+      <!--SEND Button-->
+      <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span>
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+  <!-- end of contact section  -->
+  <hr>
+  <div class="footer-basic ">
+    <footer>
+      <div class="social"><a href="https://www.linkedin.com/in/shiv-kumar-chaudhary-kurmi-22a882154/" target="_blank"
+          alt="LinkedIn Profile"><i class="icon ion-social-linkedin"></i></a>
+        <a href="https://www.facebook.com/sonu32549/" target="_blank" alt="Facebook Profile"><i
+            class="icon ion-social-facebook"></i></a><a href="mailto:spatel32549@gmail.com" alt="Mail Me"><i
+            class="icon ion-android-mail"></i></a>
+      </div>
+      <ul class="list-inline">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#education">Education </a></li>
+        <li><a href="#skills">Skills </a></li>
+        <li><a href="#projects">Projects </a></li>
+        <li><a href="#contact">Contact Me </a></li>
+      </ul>
+      <p class="copyright">Shiv Kumar Chaudhary Kurmi © 2021</p>
+    </footer>
+  </div>
+  <script>
+    //slider animation
+    $(document).ready(function () {
+      (function () {
+        if (!('requestAnimationFrame' in window)) return; if (/Mobile|Android/.test(navigator.userAgent)) return;
+        var backgrounds = [];
+        $('[data-bs-parallax-bg]').each(function () {
+          var el = $(this);
+          var bg = $('<div>');
+          bg.css({
+            backgroundImage: el.css('background-image'),
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'absolute',
+            height: '200%',
+            width: '100%',
+            top: 0, left: 0,
+            zIndex: -100
+          });
+          bg.appendTo(el);
+          backgrounds.push(bg[0]);
+          el.css({
+            position: 'relative',
+            background: 'transparent',
+            overflow: 'hidden',
+          });
+        });
+
+        if (!backgrounds.length) return;
+        var visible = [];
+        var scheduled;
+        $(window).on('scroll resize', scroll);
+        scroll();
+        function scroll() {
+          visible.length = 0;
+          for (var i = 0; i < backgrounds.length; i++) {
+            var rect = backgrounds[i].parentNode.getBoundingClientRect();
+            if (rect.bottom > 0 && rect.top < window.innerHeight) {
+              visible.push({
+                rect: rect,
+                node: backgrounds[i]
+              });
+            }
+          }
+          cancelAnimationFrame(scheduled);
+          if (visible.length) {
+            scheduled = requestAnimationFrame(update);
+          }
+        }
+        function update() {
+          for (var i = 0; i < visible.length; i++) {
+            var rect = visible[i].rect;
+            var node = visible[i].node;
+            var quot = Math.max(rect.bottom, 0) / (window.innerHeight + rect.height);
+            node.style.transform = 'translate3d(0, ' + (-50 * quot) + '%, 0)';
+          }
+        }
+      })();
+    });
+
+
+    //age calculation - calculates my actual age vs the actual day/month/year.
+
+    var automaticAge = function () {
+      var agePosition = document.getElementById('age');
+
+      var date = new Date();
+      var actualDate = [date.getDate(), date.getMonth() + 1, date.getFullYear()];
+      var myage = [06, 08, 1998];
+
+      if (actualDate[1] >= myage[1]) {
+        if (actualDate[0] >= myage[0]) {
+          var x = actualDate[2] - myage[2];
+          agePosition.innerHTML = x;
+        } else {
+          var x = actualDate[2] - myage[2] - 1;
+          agePosition.innerHTML = x;
+        }
+      } else {
+        var x = actualDate[2] - myage[2] - 1;
+        agePosition.innerHTML = x;
+      }
+    }
+    automaticAge();
+  </script>
+  {% endblock %}
